@@ -1,0 +1,45 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.carousel-container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.carousel-slide {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+}
+
+.carousel-image {
+  max-width: 100%;
+  height: auto;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.carousel-image.show {
+  opacity: 1;
+}
+.carousel-content {
+  background-color: goldenrod;
+  flex: 1;
+  height: 100%;
+}
+
+.carousel .control-dots {
+  bottom: 20px;
+}
+
+.carousel .control-prev {
+  left: 20px;
+}
+
+.carousel .control-next {
+  right: 20px;
+}

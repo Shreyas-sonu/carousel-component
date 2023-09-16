@@ -1,0 +1,95 @@
+.carousel-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  background-color: goldenrod;
+}
+
+.carousel-left {
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.carousel-content {
+  padding: 20px;
+  max-width: 400px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-content h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.carousel-content p {
+  font-size: 16px;
+}
+
+.carousel-right img {
+  max-width: 100%;
+  max-height: 100%;
+  position: relative;
+  transform-origin: right bottom; /* Set the transform origin to the bottom right */
+  transform: scale(1); /* Start with normal size */
+  transition: transform 1s ease-in-out; /* Slide-in transition */
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.7);
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  padding: 10px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.prev-button {
+  left: 10px;
+}
+
+.next-button {
+  right: 10px;
+}
+
+/* Slide-in animation */
+.carousel-right .img-enter {
+  transform: scale(0.8); /* Start with smaller size */
+}
+
+.carousel-right .img-enter-active {
+  transform: scale(1); /* Transition to normal size */
+}
+
+.carousel-right .img-exit {
+  transform: scale(1); /* Start with normal size */
+}
+
+.carousel-right .img-exit-active {
+  transform: scale(0.8); /* Transition to smaller size */
+  transition: transform 1s ease-in-out;
+}
